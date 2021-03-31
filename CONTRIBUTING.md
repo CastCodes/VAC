@@ -1,6 +1,6 @@
-# Contributing to ValheimPlus
+# Contributing to VAC
 
-## How to setup your environment for V+ development
+## How to setup your environment for VAC development
 How to setup the development enviroment to compile ValheimPlus yourself.
 
 1. Download the [BepInEx for Valheim package](https://valheim.thunderstore.io/package/download/denikson/BepInExPack_Valheim/5.4.701/).
