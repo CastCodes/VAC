@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\TheWh\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\TheWh\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_VAC.1574552262.00" t="ExcludeRecursive" />
+    <e p="C:\Users\TheWh\Documents\GitHub\VAC" t="IncludeFlat">
+      <e p=".gitignore" t="Include" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="README.md" t="Include" />
+      <e p="resources\unix\start_game_bepinex.sh" t="Include" />
+      <e p="resources\unix\start_server_bepinex.sh" t="Include" />
+      <e p="Solution Items" t="Include">
+        <e p="resources" t="Include">
+          <e p="unix" t="Include" />
+        </e>
+      </e>
+      <e p="VAC" t="IncludeRecursive">
+        <e p="AntiParams" t="Include">
+          <e p="Damage_Rule.cs" t="Include" />
+          <e p="GamePatches" t="Include">
+            <e p="Damage_Patches.cs" t="Include" />
+            <e p="Health_Patches.cs" t="Include" />
+            <e p="Player_Patches.cs" t="Include" />
+          </e>
+          <e p="Punishment_Patch.cs" t="Include" />
+        </e>
+        <e p="app.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="FodyWeavers.xml" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="VAC.cs" t="Include" />
+        <e p="VAC.csproj" t="IncludeRecursive" />
+        <e p="VConfig" t="Include">
+          <e p="Base.cs" t="Include" />
+          <e p="Configuration.cs" t="Include" />
+          <e p="Extra.cs" t="Include" />
+          <e p="Sections" t="Include">
+            <e p="AntiModsConfiguration.cs" t="Include" />
+            <e p="AntiParamsConfiguration.cs" t="Include" />
+            <e p="ServerConfiguration.cs" t="Include" />
+          </e>
+        </e>
+        <e p="VLogs" t="Include" />
+        <e p="VSync" t="Include">
+          <e p="ConfigSync.cs" t="Include" />
+          <e p="Console_Patch.cs" t="Include" />
+          <e p="FedjStartup_Patch.cs" t="Include" />
+          <e p="Game_Patch.cs" t="Include" />
+          <e p="Player_Patch.cs" t="Include" />
+          <e p="ZNet_Patch.cs" t="Include" />
+        </e>
+        <e p="VTools" t="Include">
+          <e p="Ack.cs" t="Include" />
+          <e p="GameObj.cs" t="Include" />
+          <e p="Helper.cs" t="Include" />
+          <e p="ListExt.cs" t="Include" />
+          <e p="RPCQueue.cs" t="Include" />
+          <e p="ZNetExt.cs" t="Include" />
+        </e>
+      </e>
+      <e p="VAC.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\TheWh\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\TheWh\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_VBrasil.-1361412465.00" t="ExcludeRecursive" />
+    <e p="C:\Users\TheWh\Documents\GitHub\VBrasil_Mod" t="IncludeFlat">
+      <e p=".gitignore" t="Include" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="README.md" t="Include" />
+      <e p="resources\unix\start_game_bepinex.sh" t="Include" />
+      <e p="resources\unix\start_server_bepinex.sh" t="Include" />
+      <e p="Solution Items" t="Include">
+        <e p="resources" t="Include">
+          <e p="unix" t="Include" />
+        </e>
+      </e>
+      <e p="VBrasil" t="IncludeRecursive">
+        <e p="AdvancedBuildingMode.cs" t="Include" />
+        <e p="AdvancedEditingMode.cs" t="Include" />
+        <e p="AntiAnyMods" t="Include">
+          <e p="HashAlgorithmExtensions.cs" t="Include" />
+          <e p="HookedZRoutedRpc.cs" t="Include" />
+          <e p="ILPatches.cs" t="Include" />
+          <e p="Rpc.cs" t="Include" />
+          <e p="ZNet_RPC_PeerInfoPatch.cs" t="Include" />
+        </e>
+        <e p="AntiCheat" t="Include">
+          <e p="AddPlayer_Patch.cs" t="Include" />
+          <e p="Damage_Patch.cs" t="Include" />
+          <e p="IpRegistry.cs" t="Include" />
+          <e p="MaxHealth_Patch.cs" t="Include" />
+          <e p="UpdatePlayerList_Patch.cs" t="Include" />
+        </e>
+        <e p="APIs" t="Include">
+          <e p="Effects_API.cs" t="Include" />
+          <e p="GLOBAL.cs" t="Include" />
+          <e p="Player_API.cs" t="Include" />
+          <e p="SEStarving_API.cs" t="Include" />
+          <e p="Starvation_SYS.cs" t="Include" />
+        </e>
+        <e p="app.config" t="Include" />
+        <e p="Assets" t="Include">
+          <e p="logo.png" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Configurations" t="Include">
+          <e p="BaseConfig.cs" t="Include" />
+          <e p="Configuration.cs" t="Include" />
+          <e p="ConfigurationExtra.cs" t="Include" />
+          <e p="Sections" t="Include">
+            <e p="AdvancedBuildingModeConfiguration.cs" t="Include" />
+            <e p="AdvancedEditingModeConfiguration.cs" t="Include" />
+            <e p="AntiCheatConfiguration.cs" t="Include" />
+            <e p="ArmorConfiguration.cs" t="Include" />
+            <e p="BeehiveConfiguration.cs" t="Include" />
+            <e p="BuildingConfiguration.cs" t="Include" />
+            <e p="CameraConfiguration.cs" t="Include" />
+            <e p="CraftFromChestConfiguration.cs" t="Include" />
+            <e p="DamageModConfiguration.cs" t="Include" />
+            <e p="DeconstructConfiguration.cs" t="Include" />
+            <e p="DurabilityConfiguration.cs" t="Include" />
+            <e p="ExperienceConfiguration.cs" t="Include" />
+            <e p="FermenterConfiguration.cs" t="Include" />
+            <e p="FireSourceConfiguration.cs" t="Include" />
+            <e p="FirstPersonConfiguration.cs" t="Include" />
+            <e p="FoodConfiguration.cs" t="Include" />
+            <e p="FreePlacementRotationConfiguration.cs" t="Include" />
+            <e p="FurnaceConfiguration.cs" t="Include" />
+            <e p="GameConfiguration.cs" t="Include" />
+            <e p="GatherConfiguration.cs" t="Include" />
+            <e p="GridAlignmentConfiguration.cs" t="Include" />
+            <e p="HotkeyConfiguration.cs" t="Include" />
+            <e p="HudConfiguration.cs" t="Include" />
+            <e p="InventoryConfiguration.cs" t="Include" />
+            <e p="ItemsConfiguration.cs" t="Include" />
+            <e p="KilnConfiguration.cs" t="Include" />
+            <e p="MapConfiguration.cs" t="Include" />
+            <e p="PlayerConfiguration.cs" t="Include" />
+            <e p="ServerConfiguration.cs" t="Include" />
+            <e p="ShieldConfiguration.cs" t="Include" />
+            <e p="SmelterConfiguration.cs" t="Include" />
+            <e p="StaminaConfiguration.cs" t="Include" />
+            <e p="StaminaUsageConfiguration.cs" t="Include" />
+            <e p="StructuralIntegrityConfiguration.cs" t="Include" />
+            <e p="TimeConfiguration.cs" t="Include" />
+            <e p="VBrasilConfiguration.cs" t="Include" />
+            <e p="WagonConfiguration.cs" t="Include" />
+            <e p="WardConfiguration.cs" t="Include" />
+            <e p="WorkbenchConfiguration.cs" t="Include" />
+          </e>
+        </e>
+        <e p="DamageMod" t="Include">
+          <e p="DamageMod.cs" t="Include" />
+        </e>
+        <e p="Deconstruct.cs" t="Include" />
+        <e p="Discord Messages" t="Include">
+          <e p="EventHandler.cs" t="Include" />
+          <e p="Events.cs" t="Include" />
+          <e p="Utils.cs" t="Include" />
+        </e>
+        <e p="FirstPerson" t="Include">
+          <e p="VBrasilFirstPerson.cs" t="Include" />
+        </e>
+        <e p="FodyWeavers.xml" t="Include" />
+        <e p="FreePlacementRotation.cs" t="Include" />
+        <e p="GameClasses" t="Include">
+          <e p="Attack.cs" t="Include" />
+          <e p="Beehive.cs" t="Include" />
+          <e p="ChangeLog.cs" t="Include" />
+          <e p="Console.cs" t="Include" />
+          <e p="Container.cs" t="Include" />
+          <e p="CookingStation.cs" t="Include" />
+          <e p="CraftingStation.cs" t="Include" />
+          <e p="DropTable.cs" t="Include" />
+          <e p="EnvMan.cs" t="Include" />
+          <e p="FejdStartup.cs" t="Include" />
+          <e p="Fermenter.cs" t="Include" />
+          <e p="Fireplace.cs" t="Include" />
+          <e p="Game.cs" t="Include" />
+          <e p="GameCamera.cs" t="Include" />
+          <e p="Hud.cs" t="Include" />
+          <e p="Humanoid.cs" t="Include" />
+          <e p="Inventory.cs" t="Include" />
+          <e p="InventoryGUI.cs" t="Include" />
+          <e p="ItemDrop.cs" t="Include" />
+          <e p="Minimap.cs" t="Include" />
+          <e p="Piece.cs" t="Include" />
+          <e p="Player.cs" t="Include" />
+          <e p="SE_Rested.cs" t="Include" />
+          <e p="Skills.cs" t="Include" />
+          <e p="Smelter.cs" t="Include" />
+          <e p="StationExtension.cs" t="Include" />
+          <e p="SteamGameServer.cs" t="Include" />
+          <e p="TeleportWorld.cs" t="Include" />
+          <e p="Vagon.cs" t="Include" />
+          <e p="Version.cs" t="Include" />
+          <e p="Ward.cs" t="Include" />
+          <e p="WearNTear.cs" t="Include" />
+          <e p="ZNet.cs" t="Include" />
+        </e>
+        <e p="LogsGenerator" t="Include">
+          <e p="ZNetPeer.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="PlayerCoolUI" t="Include">
+          <e p="Clases" t="Include">
+            <e p="Container.cs" t="Include" />
+            <e p="CookingStation.cs" t="Include" />
+            <e p="EnemyHud.cs" t="Include" />
+            <e p="FedjStartup.cs" t="Include" />
+            <e p="Fermenter.cs" t="Include" />
+            <e p="HotkeyBar.cs" t="Include" />
+            <e p="Hud.cs" t="Include" />
+            <e p="InventoryGrid.cs" t="Include" />
+            <e p="InventoryGUI.cs" t="Include" />
+            <e p="ItemDrop.cs" t="Include" />
+            <e p="Minimap.cs" t="Include" />
+            <e p="Plant.cs" t="Include" />
+            <e p="PUICharacterStats.cs" t="Include" />
+            <e p="Skills.cs" t="Include" />
+            <e p="SkillsDialog.cs" t="Include" />
+          </e>
+          <e p="Main.cs" t="Include" />
+          <e p="Patches" t="Include">
+            <e p="CustomWatermark.cs" t="Include" />
+            <e p="DurabilityBar.cs" t="Include" />
+            <e p="Helpers.cs" t="Include" />
+            <e p="HoverText.cs" t="Include" />
+            <e p="InventoryArmorTooltip.cs" t="Include" />
+            <e p="SkillUI.cs" t="Include" />
+            <e p="Stars.cs" t="Include" />
+            <e p="ToolTip.cs" t="Include" />
+            <e p="XP.cs" t="Include" />
+            <e p="XPBar.cs" t="Include" />
+            <e p="XPNotification.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="RPC" t="Include">
+          <e p="VBrasilAck.cs" t="Include" />
+          <e p="VBrasilConfigSync.cs" t="Include" />
+          <e p="VBrasilMapSync.cs" t="Include" />
+        </e>
+        <e p="UI" t="Include">
+          <e p="VBrasilMainMenu.cs" t="Include" />
+        </e>
+        <e p="Utility" t="Include">
+          <e p="EmbeddedAsset.cs" t="Include" />
+          <e p="GameObjectAssistant.cs" t="Include" />
+          <e p="Helper.cs" t="Include" />
+          <e p="InventoryAssistant.cs" t="Include" />
+          <e p="ListExtensions.cs" t="Include" />
+          <e p="RPCQueue.cs" t="Include" />
+          <e p="ZNetExtensions.cs" t="Include" />
+          <e p="ZPackageExtensions.cs" t="Include" />
+        </e>
+        <e p="VBrasil.cs" t="Include" />
+        <e p="VBrasil.csproj" t="IncludeRecursive" />
+        <e p="VBrasilDataObjects.cs" t="Include" />
+      </e>
+      <e p="VBrasil.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>
