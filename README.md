@@ -24,7 +24,7 @@ Detection of abnormal game parameters or **debug** modes.
 * Debug Modes
 * Damage to: Chars, Builds, Resources, Destructibles
 
-## Anti-Mods (Under Developing...)
+## Anti-Mods
 Compare the BepInEx/plugins folder of the server with the client, if something is different, like: 
 * Different mods
 * Missing mods
