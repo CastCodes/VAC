@@ -36,6 +36,7 @@ In case something is wrong, it will kick the player out when he tries to log in.
 ### Dev Credits
 * João Pster (https://github.com/J-Pster)
 * Max Bridgland (https://github.com/M4cs)
+* LeagueRalNi (https://github.com/LeagueRaINi) - AntiMods
 
 ### Repository Credits
 * Valheim+ Project (https://github.com/valheimPlus) - Config Sync

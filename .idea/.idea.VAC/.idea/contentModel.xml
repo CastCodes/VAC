@@ -15,6 +15,15 @@
         </e>
       </e>
       <e p="VAC" t="IncludeRecursive">
+        <e p="AntiMods" t="Include">
+          <e p="GamePatches" t="Include">
+            <e p="Rpc.cs" t="Include" />
+            <e p="ZNet.cs" t="Include" />
+            <e p="ZRoutedRpc.cs" t="Include" />
+          </e>
+          <e p="Hash.cs" t="Include" />
+          <e p="ILPatches.cs" t="Include" />
+        </e>
         <e p="AntiParams" t="Include">
           <e p="Damage_Rule.cs" t="Include" />
           <e p="GamePatches" t="Include">

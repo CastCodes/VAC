@@ -550,6 +550,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AntiMods\GamePatches\Rpc.cs" />
+    <Compile Include="AntiMods\GamePatches\ZNet.cs" />
+    <Compile Include="AntiMods\GamePatches\ZRoutedRpc.cs" />
+    <Compile Include="AntiMods\Hash.cs" />
+    <Compile Include="AntiMods\ILPatches.cs" />
     <Compile Include="AntiParams\Damage_Rule.cs" />
     <Compile Include="AntiParams\GamePatches\Damage_Patches.cs" />
     <Compile Include="AntiParams\GamePatches\Health_Patches.cs" />

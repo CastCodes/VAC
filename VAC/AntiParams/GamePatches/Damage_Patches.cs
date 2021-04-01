@@ -10,7 +10,8 @@ namespace VAC.AntiParams
         {
             if (Configuration.Current.AntiParams.IsEnabled)
             {
-                ZLog.LogWarning("Damage to Character");
+                if(Configuration.Current.Server.debugmode)
+                    ZLog.LogWarning("Damage to Character");
                 return Damage_Rule.Execute(hit);
             }
             else
@@ -27,7 +28,8 @@ namespace VAC.AntiParams
         {
             if (Configuration.Current.AntiParams.IsEnabled)
             {
-                ZLog.LogWarning("Damage to WearNTear");
+                if(Configuration.Current.Server.debugmode)
+                    ZLog.LogWarning("Damage to WearNTear");
                 return Damage_Rule.Execute(hit);
             }
             else
@@ -44,7 +46,8 @@ namespace VAC.AntiParams
         {
             if (Configuration.Current.AntiParams.IsEnabled)
             {
-                ZLog.LogWarning("Damage to TreeBase");
+                if(Configuration.Current.Server.debugmode)
+                    ZLog.LogWarning("Damage to TreeBase");
                 return Damage_Rule.Execute(hit);
             }
             else
@@ -61,7 +64,8 @@ namespace VAC.AntiParams
         {
             if (Configuration.Current.AntiParams.IsEnabled)
             {
-                ZLog.LogWarning("Damage to TreeBase");
+                if(Configuration.Current.Server.debugmode)
+                    ZLog.LogWarning("Damage to TreeBase");
                 return Damage_Rule.Execute(hit);
             }
             else
@@ -78,7 +82,8 @@ namespace VAC.AntiParams
         {
             if (Configuration.Current.AntiParams.IsEnabled)
             {
-                ZLog.LogWarning("Damage to MineRock5");
+                if(Configuration.Current.Server.debugmode)
+                    ZLog.LogWarning("Damage to MineRock5");
                 return Damage_Rule.Execute(hit);
             }
             else
@@ -95,7 +100,8 @@ namespace VAC.AntiParams
         {
             if (Configuration.Current.AntiParams.IsEnabled)
             {
-                ZLog.LogWarning("Damage to MineRock5");
+                if(Configuration.Current.Server.debugmode)
+                    ZLog.LogWarning("Damage to MineRock5");
                 return Damage_Rule.Execute(hit);
             }
             else

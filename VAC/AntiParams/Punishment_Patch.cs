@@ -77,14 +77,14 @@ namespace VAC.AntiParams
             if (Configuration.Current.AntiParams.ban_on_trigger)
             {
               ZNet.instance.Ban(znetPeer.m_playerName);
-              ZLog.LogError("Jogador: " + znetPeer.m_playerName + znetPeer.m_uid + znetPeer.m_characterID +
-                            " Banido por uso de Cheats.");
+              ZLog.LogError("Player: " + znetPeer.m_playerName + znetPeer.m_uid + znetPeer.m_characterID +
+                            " Bnned.");
             }
             else
             {
               ZNet.instance.Kick(znetPeer.m_playerName);
-              ZLog.LogError("Jogador" + znetPeer.m_playerName + znetPeer.m_uid + znetPeer.m_characterID +
-                            " Kickado por uso de Cheats.");
+              ZLog.LogError("Player" + znetPeer.m_playerName + znetPeer.m_uid + znetPeer.m_characterID +
+                            " Kicked.");
             }
           }
         }

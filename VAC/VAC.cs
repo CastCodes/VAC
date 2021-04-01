@@ -88,10 +88,92 @@ namespace VAC
                     Logger.LogWarning("Please visit " + VACPlugin.Repository + ".");
                 } 
             }
+
+            // By RaIŇİ᎐#0213 ^^
+            AntiMods();
         }
+
+        #region AntiMods
+        public static void AntiMods()
+        {
+            PluginsHash = VAC.AntiMods.HashAlgorithmExtensions.CreateMd5ForFolder(Paths.PluginPath);
+            ZLog.Log((object) ("[AntiMods]: Computed hash: " + PluginsHash));
+            if (Paths.ProcessName.Equals("valheim_server", StringComparison.OrdinalIgnoreCase))
+            {
+
+
+                MethodInfo methodInfo = AccessTools.Method(typeof(ZNet), "RPC_PeerInfo", new System.Type[2]
+                {
+                    typeof(ZRpc),
+                    typeof(ZPackage)
+                });
+
+                if ((object) methodInfo == null)
+                {
+                    ZLog.LogError((object) "[AntiMods] Could not find ZNet:RPC_PeerInfo");
+                    return;
+                }
+
+                harmony.Patch((MethodBase) methodInfo, new HarmonyMethod(AccessTools.Method(
+                    typeof(AntiMods.GamePatches.ZNet_RPC_PeerInfoPatch), "Prefix", new System.Type[3]
+                    {
+                        typeof(ZNet).MakeByRefType(),
+                        typeof(ZRpc),
+                        typeof(ZPackage)
+                    })));
+
+                ZLog.Log((object) "[AntiMods] Patched server!");
+            }
+            else
+            {
+                MethodInfo methodInfo1 = AccessTools.Method(typeof(ZNet), "RPC_PeerInfo", new System.Type[2]
+                {
+                    typeof(ZRpc),
+                    typeof(ZPackage)
+                });
+                if ((object) methodInfo1 == null)
+                {
+                    ZLog.LogError((object) "[AntiMods] Could not find ZNet:RPC_PeerInfo");
+                    return;
+                }
+
+                MethodInfo methodInfo2 = AccessTools.Method(typeof(ZNet), "SendPeerInfo", new System.Type[2]
+                {
+                    typeof(ZRpc),
+                    typeof(string)
+                });
+                if ((object) methodInfo2 == null)
+                {
+                    ZLog.LogError((object) "[AntiMods] Could not find ZNet:SendPeerInfo");
+                    return;
+                }
+
+                harmony.Patch((MethodBase) methodInfo2, transpiler: new HarmonyMethod(AccessTools.Method(
+                    typeof(AntiMods.ILPatches), "SendPeerInfo_Transpile", new System.Type[1]
+                    {
+                        typeof(IEnumerable<CodeInstruction>)
+                    })));
+                harmony.Patch((MethodBase) methodInfo1,
+                    postfix: new HarmonyMethod(
+                        AccessTools.Method(typeof(AntiMods.GamePatches.ZNet_RPC_PeerInfoPatch), "Postfix")));
+                ZLog.Log((object) "[AntiMods] Patched client!");
+            }
+
+            if (PluginsHash != "")
+            {
+                ZLog.LogWarning((object) "Anti-Mods is Enabled, sucessfully activated!");
+            }
+            else
+            {
+                ZLog.LogError("There was a glitch when generating the Anti-Mods hash! Anti-Mods is not working, check the console for errors and restart the application.");
+            }
+        }
+        #endregion
         
         
         // Functions
+
+        #region IsNewVersion
         public static string IsNewVersionAvailable()
         {
             WebClient client = new WebClient();
@@ -141,5 +223,6 @@ namespace VAC
 
             return "fail";
         }
+        #endregion
     }
 }
