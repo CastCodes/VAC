@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce23b026-abd9-406b-87e2-9c65dba147c5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.VAC/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VAC/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VAC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VAC/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAC/AntiParams/Damage_Rule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VAC/AntiParams/Damage_Rule.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAC/AntiParams/GamePatches/Damage_Patches.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VAC/AntiParams/GamePatches/Damage_Patches.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAC/AntiParams/Punishment_Patch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VAC/AntiParams/Punishment_Patch.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAC/VAC.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VAC/VAC.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAC/VAC.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/VAC/VAC.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAC/VConfig/Configuration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VAC/VConfig/Configuration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAC/VConfig/Sections/AntiModsConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VAC/VConfig/Sections/AntiModsConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAC/VConfig/Sections/ServerConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VAC/VConfig/Sections/ServerConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vac.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/vac.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAC/AntiMods/ILPatches.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VAC/AntiMods/ILPatches.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAC/VSync/ConfigSync.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VAC/VSync/ConfigSync.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAC/VSync/FedjStartup_Patch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VAC/VSync/FedjStartup_Patch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VAC/VSync/ZNet_Patch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VAC/VSync/ZNet_Patch.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +24,11 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D82C19CD-B7C8-4A9F-AD76-0352B3045F1E/f6/271b35a5/ConfigManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D82C19CD-B7C8-4A9F-AD76-0352B3045F1E/f4/8141c610/Patches.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D82C19CD-B7C8-4A9F-AD76-0352B3045F1E/95/cdc84210/Plugin.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/VAC/VBrasil.cs" />
@@ -47,26 +45,26 @@
       <option value="$PROJECT_DIR$/VAC/VTools/GameObj.cs" />
       <option value="$PROJECT_DIR$/VAC/VConfig/Base.cs" />
       <option value="$PROJECT_DIR$/VAC/VSync/EnforceSync.cs" />
-      <option value="$PROJECT_DIR$/VAC/VSync/FedjStartup_Patch.cs" />
       <option value="$PROJECT_DIR$/VAC/VSync/Player_Patch.cs" />
       <option value="$PROJECT_DIR$/VAC/VTools/Ack.cs" />
-      <option value="$PROJECT_DIR$/VAC/VSync/ConfigSync.cs" />
       <option value="$PROJECT_DIR$/VAC/VSync/Game_Patch.cs" />
       <option value="$PROJECT_DIR$/VAC/AntiMods/GamePatches/ZRoutedRpc.cs" />
       <option value="$PROJECT_DIR$/VAC/AntiMods/Hash.cs" />
       <option value="$PROJECT_DIR$/VAC/AntiMods/GamePatches/Rpc.cs" />
       <option value="$PROJECT_DIR$/VAC/VConfig/Sections/AntiParamsConfiguration.cs" />
-      <option value="$PROJECT_DIR$/VAC/VSync/ZNet_Patch.cs" />
       <option value="$PROJECT_DIR$/VAC/VConfig/Configuration.cs" />
       <option value="$PROJECT_DIR$/VAC/VConfig/Sections/AntiModsConfiguration.cs" />
       <option value="$PROJECT_DIR$/VAC/VConfig/Sections/ServerConfiguration.cs" />
-      <option value="$PROJECT_DIR$/VAC/AntiMods/ILPatches.cs" />
       <option value="$PROJECT_DIR$/VAC/AntiParams/Punishment_Patch.cs" />
       <option value="$PROJECT_DIR$/VAC/AntiParams/GamePatches/Damage_Patches.cs" />
       <option value="$PROJECT_DIR$/VAC/AntiParams/Damage_Rule.cs" />
       <option value="$PROJECT_DIR$/VAC/AntiMods/GamePatches/ZNet.cs" />
       <option value="$PROJECT_DIR$/VAC/VAC.cs" />
       <option value="$PROJECT_DIR$/README.md" />
+      <option value="$PROJECT_DIR$/VAC/VSync/FedjStartup_Patch.cs" />
+      <option value="$PROJECT_DIR$/VAC/AntiMods/ILPatches.cs" />
+      <option value="$PROJECT_DIR$/VAC/VSync/ConfigSync.cs" />
+      <option value="$PROJECT_DIR$/VAC/VSync/ZNet_Patch.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qEBneLyam3HsdNrnWyunLQgfQU" />
@@ -79,8 +77,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -120,7 +121,7 @@
       <workItem from="1616715417218" duration="5425000" />
       <workItem from="1617228519929" duration="296000" />
       <workItem from="1617232860183" duration="660000" />
-      <workItem from="1617282432708" duration="1359000" />
+      <workItem from="1617282432708" duration="4968000" />
     </task>
     <servers />
   </component>

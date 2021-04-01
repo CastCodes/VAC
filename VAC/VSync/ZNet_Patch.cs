@@ -15,8 +15,12 @@ namespace VAC.VSync
         /// Hook base GetOtherPublicPlayer method
         /// </summary>
         [HarmonyReversePatch]
-        [HarmonyPatch(typeof(ZNet), "GetOtherPublicPlayers", new Type[] { typeof(List<ZNet.PlayerInfo>) })]
-        public static void GetOtherPublicPlayers(object instance, List<ZNet.PlayerInfo> playerList) => throw new NotImplementedException();
+        [HarmonyPatch(typeof(ZNet), "GetOtherPublicPlayers", new Type[] {typeof(List<ZNet.PlayerInfo>)})]
+        public static void GetOtherPublicPlayers(object instance, List<ZNet.PlayerInfo> playerList)
+        {
+            ZLog.LogWarning("Don't worry, this is a Reverse Patch running a NotImplementedException(), just wait...");
+            throw new NotImplementedException();
+        } 
     }
 
     /// <summary>
@@ -67,16 +71,6 @@ namespace VAC.VSync
                 }
 
                 VACPlugin.harmony.PatchAll();
-
-                /*//We left the server, so reset our map sync check.
-                if (Configuration.Current.Map.IsEnabled && Configuration.Current.Map.shareMapProgression)
-                    VACMapSync.ShouldSyncOnSpawn = true;*/
-            }
-            else
-            {
-                /*//Save map data to disk
-                if (Configuration.Current.Map.IsEnabled && Configuration.Current.Map.shareMapProgression)
-                    VACMapSync.SaveMapDataToDisk();*/
             }
         }
     }

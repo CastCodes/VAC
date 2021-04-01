@@ -91,7 +91,7 @@ namespace VAC.VSync
                                 
                             VAC.VACPlugin.harmony.PatchAll();
 
-                            ZLog.Log("Configuração sincronizada com sucesso. (VAC)");
+                            ZLog.Log("Configuration successfully synchronized. (VAC)");
                         }
                     }
                 }

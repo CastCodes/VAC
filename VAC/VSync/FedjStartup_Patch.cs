@@ -2,8 +2,8 @@
 
 namespace VAC.VSync
 {
-    /// <summary>
-    /// Adding V+ logo and version text
+    /*/// <summary>
+    /// Adding VAC logo and version text
     /// </summary>
     [HarmonyPatch(typeof(FejdStartup), "SetupGui")]
     public static class FejdStartup_SetupGui_Patch
@@ -15,7 +15,7 @@ namespace VAC.VSync
             string gameVersion = Version.CombineVersion(global::Version.m_major, global::Version.m_minor, global::Version.m_patch);
             __instance.m_versionLabel.text = "version " + gameVersion + "\n" + "VAC " + VACPlugin.version;
         }
-    }
+    }*/
 
     /// <summary>
     /// Show Custom Connection Errors

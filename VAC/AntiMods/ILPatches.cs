@@ -49,7 +49,8 @@ namespace VAC.AntiMods
         new CodeInstruction(OpCodes.Ldstr, (object) VACPlugin.PluginsHash),
         new CodeInstruction(OpCodes.Callvirt, (object) ILPatches._zpackageWriteStr)
       });
-      codeInstructionList.ForEach((Action<CodeInstruction>) (x => ZLog.Log((object) string.Format("[{0}] {1} -> {2}", (object) "AntiCheat", (object) x.opcode, (object) (x.operand?.ToString() ?? "<none>")))));
+      if(Configuration.Current.Server.debugmode)
+        codeInstructionList.ForEach((Action<CodeInstruction>) (x => ZLog.Log((object) string.Format("[{0}] {1} -> {2}", (object) "AntiCheat", (object) x.opcode, (object) (x.operand?.ToString() ?? "<none>")))));
       return (IEnumerable<CodeInstruction>) codeInstructionList;
     }
 
