@@ -1,25 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Net;
 using BepInEx;
 using HarmonyLib;
 using System.Reflection;
 using BepInEx.Logging;
-using BepInEx.Configuration;
 using UnityEngine;
-
+using ModConfigEnforcer;
 
 namespace VAC
 {
-    // Copyright ©  2021 JOÃO PEDRO VIANA FREITAS // https://linktr.ee/JoaoPVF
+    // Copyright ©  2021 JOÃO PEDRO VIANA FREITAS // https://castcodes.com.br/
     // GITHUB REPOSITORY https://github.com/CastCodes/VAC
 
-    [BepInPlugin("br.com.castcodes.vac", "Valheim Anti-Cheat", version)]
+    [BepInPlugin(pluginid, pluginname, version)]
+    [BepInDependency("pfhoenix.modconfigenforcer")]
     public class VACPlugin : BaseUnityPlugin
     {
+        #region Basic_Infos_And_Variables
+        
         // Basic Project Info
-        public const string version = "0.0.5";
+        public const string version = "1.0.1";
+        public const string pluginname = "Valheim Anti-Cheat";
+        public const string pluginid = "br.com.castcodes.vac";
         public static string description = "An AntiCheat to Valheim";
         public static string copyright = "Copyright © - Joao Pster";
         public static string newestVersion = "";
@@ -37,57 +40,81 @@ namespace VAC
         public static List<ZNetPeer> toKick = new List<ZNetPeer>();
         public static Dictionary<ZNetPeer, Vector3> posMap;
         public static ManualLogSource logger;
+        
+        #endregion
+
+        #region MCE
+        
+        // MCE - AntiMods
+        public static ConfigVariable<bool> AntiMods_IsEnabled;
+        public static ConfigVariable<bool> forcesamemods;
+        public static ConfigVariable<bool> adminbypass;
+        
+        // MCE - AntiParams
+        public static ConfigVariable<bool> AntiParams_IsEnabled;
+        public static ConfigVariable<bool> ban_on_trigger;
+        public static ConfigVariable<bool> admins_bypass;
+        public static ConfigVariable<bool> anti_fly;
+        public static ConfigVariable<bool> anti_debug_mode;
+        public static ConfigVariable<bool> anti_god_mode;
+        public static ConfigVariable<bool> anti_damage_boost;
+        public static ConfigVariable<bool> anti_health_boost;
+        
+        // MCE - ServerConfig
+        public static ConfigVariable<bool> debugmode;
+        
+        // MCE - MessagesConfig
+        public static ConfigVariable<string> AntiModsActivated;
+        public static ConfigVariable<string> AntiModsError;
+        public static ConfigVariable<string> AntiModsKickServer;
+        public static ConfigVariable<string> AntiModsKickClient;
+        public static ConfigVariable<string> AntiParamsMsg;
+        
+        #endregion
 
         void Awake()
         {
-            // ========================= ANTI-CHEAT
+            
+            ConfigManager.ServerConfigReceived
+            // MCE
+            ConfigManager.RegisterMod(pluginid, Config);
+            VConfigMCE.Configuration.SetConfig();
+            harmony = Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), "br.com.castcodes.vac");
+            ZLog.LogWarning("===================== Configuration synchronization initiated by MCE!");
+
+                // ========================= ANTI-CHEAT
             
             logger = Logger;
             posMap = new Dictionary<ZNetPeer, Vector3>();
             toKick = new List<ZNetPeer>();
-            
-            // ========================= MAIN-PLUGIN
-            Logger.LogInfo("Trying to load the configuration file");
-            if (VConfig.Extra.LoadSettings() != true)
+
+            string newerversionused = IsNewVersionAvailable();
+            if (newerversionused == "new")
             {
-                Logger.LogError("Error when loading the configuration file.");
+                Logger.LogError("There is a newer version available of Valheim Anti Cheat.");
+                Logger.LogWarning("Please visit " + VACPlugin.Repository + ".");
+            }
+            else if (newerversionused == "same")
+            {
+                Logger.LogInfo("AntiMods [" + version + "] is up to date.");
+            }
+            else if (newerversionused == "old")
+            {
+                Logger.LogError("You are in a version ahead of the most current one.");
+                Logger.LogWarning(
+                    "If you are not a developer, please switch back to the most current stable version published.");
+                Logger.LogWarning("Please visit " + VACPlugin.Repository + ".");
+            }
+            else if (newerversionused == "fail")
+            {
+                Logger.LogError("There was a fail in stipulating the version.");
+                Logger.LogWarning("Please visit " + VACPlugin.Repository + ".");
             }
             else
             {
-                Logger.LogInfo("Configuration file loaded successfully.");
-
-                harmony.PatchAll();
-                ZLog.LogWarning("Sync Configs is: " + VConfig.Configuration.Current.Server.IsEnabled);
-                //ZLog.LogWarning("Enforce Mod is: " + VConfig.Configuration.Current.Server.enforceMod);
-                
-                string newerversionused = IsNewVersionAvailable();
-                if (newerversionused == "new")
-                {
-                    Logger.LogError("There is a newer version available of Valheim Anti Cheat.");
-                    Logger.LogWarning("Please visit " + VACPlugin.Repository + ".");
-                }
-                else if (newerversionused == "same")
-                {
-                    Logger.LogInfo("ValheimPlus [" + version + "] is up to date.");
-                }
-                else if (newerversionused == "old")
-                {
-                    Logger.LogError("You are in a version ahead of the most current one.");
-                    Logger.LogWarning(
-                        "If you are not a developer, please switch back to the most current stable version published.");
-                    Logger.LogWarning("Please visit " + VACPlugin.Repository + ".");
-                }
-                else if (newerversionused == "fail")
-                {
-                    Logger.LogError("There was a fail in stipulating the version.");
-                    Logger.LogWarning("Please visit " + VACPlugin.Repository + ".");
-                }
-                else
-                {
-                    Logger.LogError("There was a fail in stipulating the version.");
-                    Logger.LogWarning("Please visit " + VACPlugin.Repository + ".");
-                } 
-            }
+                Logger.LogError("There was a fail in stipulating the version.");
+                Logger.LogWarning("Please visit " + VACPlugin.Repository + ".");
+            } 
 
             // By RaIŇİ᎐#0213 ^^
             AntiMods();
@@ -161,11 +188,11 @@ namespace VAC
 
             if (PluginsHash != "")
             {
-                ZLog.LogWarning((object) "Anti-Mods is Enabled, sucessfully activated!");
+                ZLog.LogWarning((object) VACPlugin.AntiModsActivated.Value);
             }
             else
             {
-                ZLog.LogError("There was a glitch when generating the Anti-Mods hash! Anti-Mods is not working, check the console for errors and restart the application.");
+                ZLog.LogError(VACPlugin.AntiModsError.Value);
             }
         }
         #endregion
@@ -224,5 +251,10 @@ namespace VAC
             return "fail";
         }
         #endregion
+        
+        private void OnDestroy()
+        {
+            if (harmony != null) harmony.UnpatchAll("br.com.castcodes.vac");
+        }
     }
 }

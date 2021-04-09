@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using VConfig;
 
 namespace VAC.AntiMods.GamePatches
 {

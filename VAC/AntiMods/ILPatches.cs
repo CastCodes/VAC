@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Reflection.Emit;
 using UnityEngine.UI;
-using VConfig;
 
 namespace VAC.AntiMods
 {
@@ -49,7 +48,7 @@ namespace VAC.AntiMods
         new CodeInstruction(OpCodes.Ldstr, (object) VACPlugin.PluginsHash),
         new CodeInstruction(OpCodes.Callvirt, (object) ILPatches._zpackageWriteStr)
       });
-      if(Configuration.Current.Server.debugmode)
+      if(VACPlugin.debugmode.Value)
         codeInstructionList.ForEach((Action<CodeInstruction>) (x => ZLog.Log((object) string.Format("[{0}] {1} -> {2}", (object) "AntiCheat", (object) x.opcode, (object) (x.operand?.ToString() ?? "<none>")))));
       return (IEnumerable<CodeInstruction>) codeInstructionList;
     }
@@ -73,11 +72,11 @@ namespace VAC.AntiMods
       {
         new CodeInstruction(OpCodes.Ldarg_0),
         new CodeInstruction(OpCodes.Ldfld, (object) VACPlugin.PluginsHash),
-        new CodeInstruction(OpCodes.Ldstr, (object) "[AntiMods]: You have been kicked for using Prohibited Mods."),
+        new CodeInstruction(OpCodes.Ldstr, (object) VACPlugin.AntiModsKickServer.Value),
         new CodeInstruction(OpCodes.Callvirt, (object) ILPatches._uiSetText),
         new CodeInstruction(OpCodes.Ret)
       });
-      if(Configuration.Current.Server.debugmode)
+      if(VACPlugin.debugmode.Value)
         codeInstructionList.ForEach((Action<CodeInstruction>) (x => ZLog.Log((object) string.Format("[{0}] {1} -> {2}", (object) "AntiCheat", (object) x.opcode, (object) (x.operand?.ToString() ?? "<none>")))));
       return (IEnumerable<CodeInstruction>) codeInstructionList;
     }

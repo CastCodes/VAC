@@ -28,7 +28,7 @@ namespace VAC.VSync
         {
             if (ZNet.GetConnectionStatus() != (ZNet.ConnectionStatus) 99)
                 return;
-            __instance.m_connectionFailedError.text = "[AntiMods]: You were kicked for using prohibited or outdated mods.\nYour data was sent to the server.";
+            __instance.m_connectionFailedError.text = VACPlugin.AntiModsKickClient.Value;
             ZLog.LogError("Player Found with Cheats in Folder or Running.");
             ZLog.LogError("Sending player information to the server...");
             ZLog.LogError("Player disconnected from server for using improper programs...");

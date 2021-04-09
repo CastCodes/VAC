@@ -1,28 +1,25 @@
-﻿using HarmonyLib;
-using VConfig;
-
-namespace VAC.AntiParams
+﻿namespace VAC.AntiParams
 {
     public class Damage_Rule
     {
         public static bool Execute(HitData hit)
         {
-            if (Configuration.Current.AntiParams.IsEnabled)
+            if (VACPlugin.AntiParams_IsEnabled.Value)
             {
-                if (!Configuration.Current.AntiParams.anti_debug_mode &&
-                    !Configuration.Current.AntiParams.anti_damage_boost)
+                if (!VACPlugin.anti_debug_mode.Value &&
+                    !VACPlugin.anti_damage_boost.Value)
                     return true;
 
                 Character senderChar = hit.GetAttacker();
 
                 if (senderChar != null)
-                    if (Configuration.Current.Server.debugmode)
+                    if (VACPlugin.debugmode.Value)
                         ZLog.LogError("Send Char" + senderChar);
 
                 if (senderChar != null && senderChar.IsPlayer())
                 {
                     ZNetPeer peer = ZNet.instance.GetPeer(senderChar.GetInstanceID());
-                    if (Configuration.Current.Server.debugmode)
+                    if (VACPlugin.debugmode.Value)
                     {
                         ZLog.LogError("Player Detected, player:" + senderChar.GetInstanceID());
                         ZLog.LogError("Damage = " + hit.GetTotalDamage());
@@ -30,10 +27,10 @@ namespace VAC.AntiParams
 
                     float damage = hit.GetTotalDamage();
                     if (peer != null &&
-                        (!Configuration.Current.AntiParams.admins_bypass ||
+                        (!VACPlugin.admins_bypass.Value ||
                          !ZNet.instance.m_adminList.Contains(peer.m_rpc.GetSocket().GetHostName())) && damage > 1000f)
                     {
-                        if (Configuration.Current.Server.debugmode)
+                        if (VACPlugin.debugmode.Value)
                             ZLog.LogError("Player Detected with Damage Boost.");
                         VACPlugin.toKick.Add(peer);
                     }

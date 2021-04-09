@@ -1,5 +1,4 @@
 ﻿using HarmonyLib;
-using VConfig;
 
 namespace VAC.AntiParams
 {
@@ -8,9 +7,9 @@ namespace VAC.AntiParams
     {
         private static bool Prefix(ref Character __instance, ref long sender, ref HitData hit)
         {
-            if (Configuration.Current.AntiParams.IsEnabled)
+            if (VACPlugin.AntiParams_IsEnabled.Value)
             {
-                if(Configuration.Current.Server.debugmode)
+                if(VACPlugin.debugmode.Value)
                     ZLog.LogWarning("Damage to Character");
                 return Damage_Rule.Execute(hit);
             }
@@ -26,9 +25,9 @@ namespace VAC.AntiParams
     {
         private static bool Prefix(ref WearNTear __instance,ref long sender, ref HitData hit)
         {
-            if (Configuration.Current.AntiParams.IsEnabled)
+            if (VACPlugin.AntiParams_IsEnabled.Value)
             {
-                if(Configuration.Current.Server.debugmode)
+                if(VACPlugin.debugmode.Value)
                     ZLog.LogWarning("Damage to WearNTear");
                 return Damage_Rule.Execute(hit);
             }
@@ -44,9 +43,9 @@ namespace VAC.AntiParams
     {
         private static bool Prefix(ref TreeBase __instance,ref long sender, ref HitData hit)
         {
-            if (Configuration.Current.AntiParams.IsEnabled)
+            if (VACPlugin.AntiParams_IsEnabled.Value)
             {
-                if(Configuration.Current.Server.debugmode)
+                if(VACPlugin.debugmode.Value)
                     ZLog.LogWarning("Damage to TreeBase");
                 return Damage_Rule.Execute(hit);
             }
@@ -62,9 +61,9 @@ namespace VAC.AntiParams
     {
         private static bool Prefix(ref TreeLog __instance,ref long sender, ref HitData hit)
         {
-            if (Configuration.Current.AntiParams.IsEnabled)
+            if (VACPlugin.AntiParams_IsEnabled.Value)
             {
-                if(Configuration.Current.Server.debugmode)
+                if(VACPlugin.debugmode.Value)
                     ZLog.LogWarning("Damage to TreeBase");
                 return Damage_Rule.Execute(hit);
             }
@@ -80,9 +79,9 @@ namespace VAC.AntiParams
     {
         private static bool Prefix(ref MineRock5 __instance,ref long sender, ref HitData hit)
         {
-            if (Configuration.Current.AntiParams.IsEnabled)
+            if (VACPlugin.AntiParams_IsEnabled.Value)
             {
-                if(Configuration.Current.Server.debugmode)
+                if(VACPlugin.debugmode.Value)
                     ZLog.LogWarning("Damage to MineRock5");
                 return Damage_Rule.Execute(hit);
             }
@@ -98,9 +97,9 @@ namespace VAC.AntiParams
     {
         private static bool Prefix(ref Destructible __instance,ref long sender, ref HitData hit)
         {
-            if (Configuration.Current.AntiParams.IsEnabled)
+            if (VACPlugin.AntiParams_IsEnabled.Value)
             {
-                if(Configuration.Current.Server.debugmode)
+                if(VACPlugin.debugmode.Value)
                     ZLog.LogWarning("Damage to MineRock5");
                 return Damage_Rule.Execute(hit);
             }

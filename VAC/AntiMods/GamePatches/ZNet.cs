@@ -1,5 +1,4 @@
 ﻿using BepInEx;
-using VConfig;
 
 namespace VAC.AntiMods.GamePatches
 {
@@ -21,14 +20,12 @@ namespace VAC.AntiMods.GamePatches
                 }
 
                 ZLog.Log((object) ("[AntiMods]: Got client hash: " + self + "\nmine: " + VACPlugin.PluginsHash));
-                if(Configuration.Current.Server.debugmode && self == "")
-                    ZLog.LogError("[AntiMods]: Client Without Hash!");
-                ZLog.LogWarning("Plugins Hash is Equals: " + !self.Equals(VACPlugin.PluginsHash) + " ForceMods: " + Configuration.Current.AntiMods.forcesamemods);
-                ZLog.LogWarning("Is in Admin List: " + !ZNet.instance.m_adminList.Contains(rpc.GetSocket().GetHostName()) + "Admin Bypass: " + Configuration.Current.AntiMods.adminbypass);
+                ZLog.LogWarning("Plugins Hash is Equals: " + !self.Equals(VACPlugin.PluginsHash) + " ForceMods: " + VACPlugin.forcesamemods.Value);
+                ZLog.LogWarning("Is in Admin List: " + !ZNet.instance.m_adminList.Contains(rpc.GetSocket().GetHostName()) + "Admin Bypass: " + VACPlugin.adminbypass.Value);
                 pkg.SetPos(0);
-                if (Configuration.Current.AntiMods.adminbypass && ZNet.instance.m_adminList.Contains(rpc.GetSocket().GetHostName()))
+                if (VACPlugin.adminbypass.Value && ZNet.instance.m_adminList.Contains(rpc.GetSocket().GetHostName()))
                     return true;
-                if (!self.Equals(VACPlugin.PluginsHash) && Configuration.Current.AntiMods.forcesamemods)
+                if (!self.Equals(VACPlugin.PluginsHash) && VACPlugin.forcesamemods.Value)
                 {
                     int num = self.IsNullOrWhiteSpace() ? 3 : 99;
                     ZLog.Log((object) ("[AntiMods]: Kicking Client: " + rpc.GetSocket().GetEndPointString() + " (incompatible mods)"));

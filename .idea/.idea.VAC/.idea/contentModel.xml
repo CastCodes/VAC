@@ -43,25 +43,11 @@
         </e>
         <e p="VAC.cs" t="Include" />
         <e p="VAC.csproj" t="IncludeRecursive" />
-        <e p="VConfig" t="Include">
-          <e p="Base.cs" t="Include" />
+        <e p="VConfigMCE" t="Include">
           <e p="Configuration.cs" t="Include" />
-          <e p="Extra.cs" t="Include" />
-          <e p="Sections" t="Include">
-            <e p="AntiModsConfiguration.cs" t="Include" />
-            <e p="AntiParamsConfiguration.cs" t="Include" />
-            <e p="ServerConfiguration.cs" t="Include" />
-          </e>
+          <e p="FedjStartup_Patch.cs" t="Include" />
         </e>
         <e p="VLogs" t="Include" />
-        <e p="VSync" t="Include">
-          <e p="ConfigSync.cs" t="Include" />
-          <e p="Console_Patch.cs" t="Include" />
-          <e p="FedjStartup_Patch.cs" t="Include" />
-          <e p="Game_Patch.cs" t="Include" />
-          <e p="Player_Patch.cs" t="Include" />
-          <e p="ZNet_Patch.cs" t="Include" />
-        </e>
         <e p="VTools" t="Include">
           <e p="Ack.cs" t="Include" />
           <e p="GameObj.cs" t="Include" />

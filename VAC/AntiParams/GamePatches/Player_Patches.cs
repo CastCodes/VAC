@@ -1,6 +1,5 @@
 ﻿using HarmonyLib;
 using UnityEngine;
-using VConfig;
 using System;
 using UnityEngine.Rendering;
 
@@ -11,7 +10,7 @@ namespace VAC.AntiParams.GamePatches
     {
         public static void Postfix(ZNet __instance, ZNetPeer peer)
         {
-            if (Configuration.Current.AntiParams.IsEnabled)
+            if (VACPlugin.AntiParams_IsEnabled.Value)
             {
                 if (VACPlugin.posMap.ContainsKey(peer))
                     return;
@@ -25,7 +24,7 @@ namespace VAC.AntiParams.GamePatches
   {
     private static void Postfix()
     {
-      if (Configuration.Current.AntiParams.IsEnabled)
+      if (VACPlugin.AntiParams_IsEnabled.Value)
       {
         if (!((UnityEngine.Object) ZNet.instance != (UnityEngine.Object) null))
           return;
@@ -35,12 +34,11 @@ namespace VAC.AntiParams.GamePatches
           foreach (Player player in Player.m_players)
           {
             ZNetPeer peerByPlayerName = ZNet.instance.GetPeerByPlayerName(player.name);
-            if ((player.m_debugFly || player.m_noPlacementCost && Configuration.Current.AntiParams.anti_debug_mode) &&
+            if ((player.m_debugFly || player.m_noPlacementCost && VACPlugin.anti_debug_mode.Value) &&
                 (peerByPlayerName != null &&
                  !ZNet.instance.m_adminList.Contains(peerByPlayerName.m_rpc.GetSocket().GetHostName())))
               VACPlugin.toKick.Add(peerByPlayerName);
-            if (player.m_godMode && Configuration.Current.AntiParams.anti_god_mode && (peerByPlayerName != null &&
-              !ZNet.instance.m_adminList.Contains(peerByPlayerName.m_rpc.GetSocket().GetHostName())))
+            if (player.m_godMode && VACPlugin.anti_god_mode.Value && (peerByPlayerName != null && !ZNet.instance.m_adminList.Contains(peerByPlayerName.m_rpc.GetSocket().GetHostName())))
               VACPlugin.toKick.Add(peerByPlayerName);
           }
         }
@@ -51,7 +49,7 @@ namespace VAC.AntiParams.GamePatches
           {
             if (VACPlugin.posMap[peer] == Vector3.zero)
               VACPlugin.posMap[peer] = peer.m_refPos;
-            else if (Configuration.Current.AntiParams.anti_fly)
+            else if (VACPlugin.anti_fly.Value)
             {
               if ((double) Math.Abs(peer.m_refPos.x - VACPlugin.posMap[peer].x) > 70.0 ||
                   (double) Math.Abs(peer.m_refPos.y - VACPlugin.posMap[peer].y) > 35.0 ||
@@ -72,10 +70,10 @@ namespace VAC.AntiParams.GamePatches
           return;
         foreach (ZNetPeer znetPeer in VACPlugin.toKick)
         {
-          if (!Configuration.Current.AntiParams.admins_bypass ||
+          if (!VACPlugin.admins_bypass.Value ||
               !ZNet.instance.m_adminList.Contains(znetPeer.m_rpc.GetSocket().GetHostName()))
           {
-            if (Configuration.Current.AntiParams.ban_on_trigger)
+            if (VACPlugin.ban_on_trigger.Value)
             {
               ZNet.instance.Ban(znetPeer.m_playerName);
               ZLog.LogError("Jogador: " + znetPeer.m_playerName + znetPeer.m_uid + znetPeer.m_characterID +
