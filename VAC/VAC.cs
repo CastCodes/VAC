@@ -74,8 +74,6 @@ namespace VAC
 
         void Awake()
         {
-            
-            ConfigManager.ServerConfigReceived
             // MCE
             ConfigManager.RegisterMod(pluginid, Config);
             VConfigMCE.Configuration.SetConfig();

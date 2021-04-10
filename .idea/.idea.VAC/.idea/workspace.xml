@@ -2,31 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce23b026-abd9-406b-87e2-9c65dba147c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/VAC/VConfigMCE/Configuration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.VAC/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VAC/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VAC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VAC/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAC/AntiMods/GamePatches/Rpc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VAC/AntiMods/GamePatches/Rpc.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAC/AntiMods/GamePatches/ZNet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VAC/AntiMods/GamePatches/ZNet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAC/AntiMods/ILPatches.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VAC/AntiMods/ILPatches.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAC/AntiParams/Damage_Rule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VAC/AntiParams/Damage_Rule.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAC/AntiParams/GamePatches/Damage_Patches.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VAC/AntiParams/GamePatches/Damage_Patches.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VAC/AntiParams/GamePatches/Player_Patches.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VAC/AntiParams/GamePatches/Player_Patches.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VAC/AntiParams/Punishment_Patch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VAC/AntiParams/Punishment_Patch.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VAC/VAC.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VAC/VAC.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAC/VAC.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/VAC/VAC.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAC/VConfig/Base.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAC/VConfig/Configuration.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAC/VConfig/Extra.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAC/VConfig/Sections/AntiModsConfiguration.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAC/VConfig/Sections/AntiParamsConfiguration.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAC/VConfig/Sections/ServerConfiguration.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAC/VSync/ConfigSync.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAC/VSync/Console_Patch.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAC/VSync/FedjStartup_Patch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VAC/VConfigMCE/FedjStartup_Patch.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAC/VSync/Game_Patch.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAC/VSync/Player_Patch.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/VAC/VSync/ZNet_Patch.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vac.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/vac.cfg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,10 +24,13 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D82C19CD-B7C8-4A9F-AD76-0352B3045F1E/f6/271b35a5/ConfigManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D82C19CD-B7C8-4A9F-AD76-0352B3045F1E/f4/8141c610/Patches.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8C7C3482-1EA1-4FEC-A71B-1C03F25447D0/fc/c801345a/ObjectDB.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D82C19CD-B7C8-4A9F-AD76-0352B3045F1E/95/cdc84210/Plugin.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6D21F926-CDF5-4392-B3E0-8E1BA5A515B1/07/519cb413/UpdatePlayerList_Patch.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/30268780-26BE-49B4-BFAD-375CC4093DC3/cc/dc049bcc/BaseUnityPlugin.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6D21F926-CDF5-4392-B3E0-8E1BA5A515B1/f5/9af552de/AddPlayer_Patch.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D82C19CD-B7C8-4A9F-AD76-0352B3045F1E/f6/271b35a5/ConfigManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8C7C3482-1EA1-4FEC-A71B-1C03F25447D0/fc/c801345a/ObjectDB.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -82,14 +64,14 @@
       <option value="$PROJECT_DIR$/VAC/AntiMods/GamePatches/Rpc.cs" />
       <option value="$PROJECT_DIR$/VAC/AntiParams/GamePatches/Damage_Patches.cs" />
       <option value="$PROJECT_DIR$/VAC/AntiMods/GamePatches/ZNet.cs" />
-      <option value="$PROJECT_DIR$/VAC/AntiParams/GamePatches/Player_Patches.cs" />
       <option value="$PROJECT_DIR$/VAC/AntiParams/Damage_Rule.cs" />
-      <option value="$PROJECT_DIR$/VAC/AntiParams/Punishment_Patch.cs" />
       <option value="$PROJECT_DIR$/VAC/VAC.csproj" />
       <option value="$PROJECT_DIR$/VAC/VConfigMCE/FedjStartup_Patch.cs" />
       <option value="$PROJECT_DIR$/VAC/VConfigMCE/Configuration.cs" />
       <option value="$PROJECT_DIR$/VAC/AntiMods/ILPatches.cs" />
       <option value="$PROJECT_DIR$/VAC/VAC.cs" />
+      <option value="$PROJECT_DIR$/VAC/AntiParams/GamePatches/Player_Patches.cs" />
+      <option value="$PROJECT_DIR$/VAC/AntiParams/Punishment_Patch.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qEBneLyam3HsdNrnWyunLQgfQU" />
@@ -155,6 +137,7 @@
       <workItem from="1617994139059" duration="8000" />
       <workItem from="1617994175154" duration="3055000" />
       <workItem from="1617997455695" duration="1151000" />
+      <workItem from="1618076859393" duration="3448000" />
     </task>
     <servers />
   </component>
